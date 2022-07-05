@@ -1,0 +1,9 @@
+<%= form_for @shift do |s| %>
+    <%= s.label :start %><br>
+    <%= s.text_field :start %><br>
+    <%= s.label :finish %><br>
+    <%= s.text_field :finish %><br>
+    <%= s.label :break_length %><br>
+    <%= s.text_field :break_length %><br>
+    <%= s.submit "Create"%><br>
+    <% end %>
