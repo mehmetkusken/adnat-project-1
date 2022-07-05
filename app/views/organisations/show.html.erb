@@ -1,0 +1,6 @@
+<h1>Name: <%= @organisation.name %></h1>
+<h1>Rate: <%= @organisation.hourly_rate %></h1>
+<%= link_to "View Shift" , shifts_path %>
+<%= link_to "Edit" , edit_organisation_path %>
+<%= link_to "Delete", organisation_path , :method => :delete %>
+</br>
