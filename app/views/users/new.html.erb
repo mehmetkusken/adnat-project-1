@@ -1,6 +1,7 @@
 
 
     <%= form_for @user do |u| %>
+    <%= render partial: "layouts/errors", locals: {record: @user} %>
     <%= u.text_field :name %>
     <%= u.label :name %><br>
     <%= u.text_field :email %>
