@@ -6,15 +6,19 @@
     <th>Start Time</th>
     <th>Finish Time</th>
     <th>Break Length</th>
+    <th>Hours worked</th>
+    <th>Shift Cost</th>
   </tr>
 <% @shifts.each do |s| %>
 
   <tr>
     <td> <%= s.user.name %></td>
-    <td> <%= s.created_at %></td>
+    <td> <%= s.created_at.strftime("%d/%m/%Y") %></td>
     <td> <%= s.start %></td>
     <td> <%= s.finish %></td>
     <td> <%= s.break_length %></td>
+    <td> <%= time_diff(s.start , s.finish , s.break_length) %></td>
+    <td> <%= cost(time_diff(s.start , s.finish , s.break_length)).round(2) %>$</td>
   </tr>
   
 

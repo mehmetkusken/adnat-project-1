@@ -1,6 +1,12 @@
 module ShiftsHelper
-    def time_diff(start_time, end_time)
+    def time_diff(start_time, end_time , dakika )
         seconds_diff = (start_time - end_time).to_i.abs
-        hours = seconds_diff / 3600
+        minutes = seconds_diff / 60
+        sonuc = (minutes - dakika).to_f
+        tam = (sonuc / 60).to_f   
+    end
+
+    def cost(hours)
+        total = (hours * 10).to_f
     end
 end
