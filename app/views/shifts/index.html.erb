@@ -1,19 +1,19 @@
 <h1>Shift List</h1>
 <table>
 <tr>
-    <th>Name</th>
-    <th>Start</th>
-    <th>Finish</th>
-    <th>Created</th>
-    <th>Break</th>
+    <th>Employe Name</th>
+    <th>Shift Date</th>
+    <th>Start Time</th>
+    <th>Finish Time</th>
+    <th>Break Length</th>
   </tr>
 <% @shifts.each do |s| %>
 
   <tr>
     <td> <%= s.user.name %></td>
+    <td> <%= s.created_at %></td>
     <td> <%= s.start %></td>
     <td> <%= s.finish %></td>
-    <td> <%= s.created_at %></td>
     <td> <%= s.break_length %></td>
   </tr>
   
