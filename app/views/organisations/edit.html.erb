@@ -1,2 +1,10 @@
 <h1>Edit Organisation</h1>
-<%= render "form" %>
+
+
+<%= form_for @organisation do |o| %>
+    <%= o.label :name %><br>
+    <%= o.text_field :name %><br>
+    <%= o.label :hourly_rate %><br>
+    <%= o.text_field :hourly_rate %><br>
+    <%= o.submit "Edit"%><br>
+    <% end %>

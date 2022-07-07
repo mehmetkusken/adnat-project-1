@@ -1,6 +1,6 @@
 
 
-    <%= form_for @user do |u| %>
+    <%= form_for [@organisation , @user] do |u| %>
     <%= render partial: "layouts/errors", locals: {record: @user} %>
     <%= u.text_field :name %>
     <%= u.label :name %><br>
@@ -11,7 +11,11 @@
     <%= u.password_field :password_confirmation %>
     <%= u.label :password_confirmation %><br>
 
+    <%= u.label :organisation%>
+    <%= u.collection_select :organisation_id, Organisation.all, :id, :name, prompt: true %>
     
      <%= u.submit "Sign Up!"%>
     <% end %>
+
+    
     

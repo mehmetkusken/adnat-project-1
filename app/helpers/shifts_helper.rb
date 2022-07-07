@@ -6,7 +6,7 @@ module ShiftsHelper
         tam = (sonuc / 60).to_f   
     end
 
-    def cost(hours)
-        total = (hours * 10).to_f
+    def cost(rate,hours)
+        total = (hours * rate).to_f
     end
 end

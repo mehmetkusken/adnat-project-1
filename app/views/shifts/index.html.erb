@@ -2,10 +2,11 @@
 <table>
 <tr>
     <th>Employe Name</th>
+    <th>Organisation Name</th>
     <th>Shift Date</th>
     <th>Start Time</th>
     <th>Finish Time</th>
-    <th>Break Length</th>
+    <th>Break Length(Minutes)</th>
     <th>Hours worked</th>
     <th>Shift Cost</th>
   </tr>
@@ -13,15 +14,17 @@
 
   <tr>
     <td> <%= s.user.name %></td>
+    <td> <%= s.user.organisation.name %></td>
     <td> <%= s.created_at.strftime("%d/%m/%Y") %></td>
-    <td> <%= s.start %></td>
-    <td> <%= s.finish %></td>
+    <td> <%= s.start.strftime("%I:%M %p") %></td>
+    <td> <%= s.finish.strftime("%I:%M %p") %></td>
     <td> <%= s.break_length %></td>
     <td> <%= time_diff(s.start , s.finish , s.break_length) %></td>
-    <td> <%= cost(time_diff(s.start , s.finish , s.break_length)).round(2) %>$</td>
+    <td> <%= cost(s.user.organisation.hourly_rate ,time_diff(s.start , s.finish , s.break_length)).round(2) %>$</td>
   </tr>
   
 
      <% end %>
      </table>  
 <%= link_to "Create a Shift" , new_shift_path %>
+<%= link_to "Organisations" , organisations_path %>

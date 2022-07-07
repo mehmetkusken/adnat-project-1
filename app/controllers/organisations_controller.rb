@@ -28,6 +28,7 @@ class OrganisationsController < ApplicationController
     end
 
     def update
+        
         if @organisation.update(organisation_params)
             redirect_to @organisation
         else
@@ -47,7 +48,7 @@ class OrganisationsController < ApplicationController
     def set_organisation
         @organisation = Organisation.find(params[:id])
     end
-    
+
 
     def organisation_params
         params.require(:organisation).permit(:name, :hourly_rate)

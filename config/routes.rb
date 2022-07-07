@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :shifts
-  resources :users
-  resources :organisations
+
+  resources :organisations do
+    resources :users
+  end
 
   delete "/logout", to: "sessions#logout", as: "logout"
   get "/login", to: "sessions#login", as: "login"

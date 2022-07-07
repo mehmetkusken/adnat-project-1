@@ -5,3 +5,7 @@
 <%= link_to "Delete", organisation_path , :method => :delete %>
 <%= link_to "Organisations" , organisations_path %>
 </br>
+<% if !logged_in? %>
+<%= link_to "Login" , login_path %>
+<%= link_to "Sign Up" , new_organisation_user_path(@organisation) %>
+<% end %>

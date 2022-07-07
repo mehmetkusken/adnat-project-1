@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
     def logout
         session.clear
-        redirect_to login_path
+        redirect_to organisations_path
     end
 
     def login
