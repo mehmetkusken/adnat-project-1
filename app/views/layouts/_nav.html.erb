@@ -1,5 +1,5 @@
 <% if logged_in? %>
-<nav><%= link_to "Logout" , logout_path , method: "delete"%>
+<nav><p>Logged in as <%= current_user.name %><%= link_to " Logout" , logout_path , method: "delete"%></p>
 
 <% end %>
 </nav>
