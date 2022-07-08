@@ -1,8 +1,15 @@
 <h1>Organisations</h1>
+<div class="index">
+<%= form_tag organisations_path , method: :get do%>
+    <%= label_tag :name%>
+    <%= text_field_tag :search %></br>
+    <%= submit_tag "Search!"%>
+    <% end %>
+    </div><br>
+    <br>
 <% @organisations.each do |o| %>
     <div class="index">
     <li><%= link_to o.name , o %></li>
-   
     </div>
      <% end %>
 

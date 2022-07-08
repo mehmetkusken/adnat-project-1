@@ -2,7 +2,8 @@ class OrganisationsController < ApplicationController
     before_action :set_organisation, only: [:show, :edit, :update, :destroy]
  
     def index
-        @organisations = Organisation.all
+        @params = params.permit(:search).to_h
+        @organisations = Organisation.filter_by_params(@params)
     end
    
     
