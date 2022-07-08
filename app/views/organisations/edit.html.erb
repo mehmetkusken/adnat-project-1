@@ -1,6 +1,6 @@
 <h1>Edit Organisation</h1>
 
-
+<div class= "form">
 <%= form_for @organisation do |o| %>
     <%= o.label :name %><br>
     <%= o.text_field :name %><br>
@@ -8,3 +8,7 @@
     <%= o.text_field :hourly_rate %><br>
     <%= o.submit "Edit"%><br>
     <% end %>
+    
+
+    </div>
+    <%= link_to  "Organisations" , organisations_path %>

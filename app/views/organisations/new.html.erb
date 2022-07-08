@@ -1,6 +1,6 @@
 <h1>Create Organisation</h1>
 
-
+<div class= "form">
     <%= form_for @organisation do |o| %>
         <%= o.label :name %><br>
         <%= o.text_field :name %><br>
@@ -8,3 +8,5 @@
         <%= o.text_field :hourly_rate %><br>
         <%= o.submit "Create and Join"%><br>
         <% end %>
+
+</div>

@@ -1,3 +1,5 @@
+
+<div class= "form">
 <%= form_tag login_path do %>
     <%= label_tag :email %>
     <%= text_field_tag :email %><br>
@@ -5,5 +7,6 @@
     <%= password_field_tag :password %><br>
     <%= submit_tag "Login!" %><br>
 <% end %>
+</div>
 <%= link_to  "Forgot your password?" , password_reset_path %>
 <%= link_to  "Organisations!" , organisations_path %>

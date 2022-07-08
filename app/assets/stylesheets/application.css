@@ -17,8 +17,19 @@
     color: red;
 
  }
+
+ .form {
+    border: 5px solid #FFFF00;
+    text-align: center;
+  }
+
+ h1 {
+    text-align: center;
+  }
  
  .field_with_errors > input{
      border: solid red 3px;
      
  }
+
+ 

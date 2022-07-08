@@ -1,9 +1,9 @@
 <h1>Forgot your password?</h1>
-
+<div class= "form"></div>
 <%= form_with url: password_reset_path do |form|%>
     <%= form.text_field :email %>
     <%= form.label :email %><br>
     <%= form.submit "Reset Password!"%>
     <% end %>
-    
-    <%= button_to "Organisations!" , organisations_path %>
+    </div>
+    <%= link_to "Organisations!" , organisations_path %>
