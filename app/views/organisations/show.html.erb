@@ -3,7 +3,7 @@
 <%= link_to "Sign Up" , new_organisation_user_path(@organisation) , class: "index-link"%>
 
 <h1>Name: <%= @organisation.name %></h1>
-<h1>Rate: <%= @organisation.hourly_rate %></h1>
+<h1>Rate: <%= @organisation.hourly_rate %>$</h1>
 <%= link_to "View Shift" , shifts_path , class: "index-link"%>
 <%= link_to "Edit" , edit_organisation_path , class: "index-link"%>
 <%= link_to "Delete", organisation_path , :method => :delete , class: "index-link" %>
